@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Farrel Al Faqih Ekatama | Cerita Singkat Farrel</title>
+    <title>Learning Profile Farrel | Cyber Security & IT Governance</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,10 +17,10 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* bg-gray-900 */
+            background-color: #0B1120; /* bg-slate-950 */
             color: #d1d5db; /* text-gray-300 */
         }
-        
+
         /* --- Timeline Styles --- */
         .timeline-container {
             position: relative;
@@ -32,7 +32,7 @@
             content: '';
             position: absolute;
             width: 4px;
-            background-color: #374151; /* bg-gray-700 */
+            background-color: #1F2937; /* bg-gray-800 */
             top: 0;
             bottom: 0;
             left: 50%;
@@ -48,19 +48,17 @@
         }
 
         .timeline-item .dot {
-            content: '';
             position: absolute;
             width: 20px;
             height: 20px;
             right: -10px;
-            background-color: #111827;
+            background-color: #020617; /* slate-950 */
             border: 4px solid #14b8a6; /* border-teal-500 */
             top: 25px;
             border-radius: 50%;
             z-index: 1;
         }
 
-        /* --- Positioning --- */
         .left {
             left: 0;
         }
@@ -78,11 +76,32 @@
         }
         
         .timeline-content {
-            @apply bg-gray-800 p-6 rounded-xl shadow-lg transition-all duration-500 hover:shadow-teal-500/20 hover:scale-105 cursor-pointer;
+            background-color: #020617; /* slate-950 */
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 40px rgba(45, 212, 191, 0.28);
+            border-color: rgba(45, 212, 191, 0.4);
         }
         
         .item-badge {
-             @apply inline-block bg-teal-500/20 text-teal-300 text-xs font-semibold px-3 py-1 rounded-full mb-2;
+            display: inline-block;
+            background-color: rgba(45, 212, 191, 0.15);
+            color: #5eead4;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 0.35rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
 
         /* Responsive */
@@ -114,34 +133,68 @@
             transform: translateY(0);
         }
 
-        /* Modal Styles */
+        /* Modal Styles (no @apply) */
         .modal-overlay {
-            @apply fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4 transition-opacity duration-300;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
         }
         .modal-content {
-            @apply bg-gray-800 rounded-lg shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300;
+            background-color: #020617;
+            border-radius: 0.75rem;
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.9);
+            max-width: 42rem;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(148, 163, 184, 0.35);
         }
         .modal-overlay.active {
-            @apply opacity-100;
+            opacity: 1;
+            pointer-events: auto;
         }
         .modal-overlay.active .modal-content {
-            @apply scale-100;
+            transform: scale(1);
+        }
+
+        /* E-learning style helper */
+        .pill-soft {
+            border-radius: 9999px;
+            padding: 0.35rem 0.9rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
     </style>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏳</text></svg>">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 </head>
 <body class="antialiased">
 
     <!-- Header & Navigation -->
-    <header id="header" class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md">
+    <header id="header" class="bg-slate-950/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-md border-b border-slate-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#home" class="text-xl font-bold text-white tracking-wider">Farrel Portofolio</a>
+            <a href="#home" class="text-xl font-bold text-white tracking-wider flex items-center gap-2">
+                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-teal-500/20 text-teal-300 text-lg">F</span>
+                <span>Farrel Learning Space</span>
+            </a>
             <nav class="hidden md:flex space-x-6 text-sm items-center">
-                <a href="#journey" class="hover:text-teal-400 transition-colors">Pengalaman Saya</a>
-                <a href="#skills" class="hover:text-teal-400 transition-colors">Keahlian</a>
-                <a href="#tools" class="hover:text-teal-400 transition-colors">Alat & Teknologi</a>
-                <a href="#portfolio" class="hover:text-teal-400 transition-colors">Portofolio</a>
-                <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Hubungi Saya</a>
+                <a href="#journey" class="hover:text-teal-400 transition-colors">Learning Journey</a>
+                <a href="#tracks" class="hover:text-teal-400 transition-colors">Learning Tracks</a>
+                <a href="#skills" class="hover:text-teal-400 transition-colors">Skills</a>
+                <a href="#portfolio" class="hover:text-teal-400 transition-colors">Projects</a>
+                <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -150,38 +203,63 @@
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-            <a href="#journey" class="block py-2 px-6 text-sm hover:bg-gray-700">Pengalaman Saya</a>
-            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-700">Keahlian</a>
-            <a href="#tools" class="block py-2 px-6 text-sm hover:bg-gray-700">Alat & Teknologi</a>
-            <a href="#portfolio" class="block py-2 px-6 text-sm hover:bg-gray-700">Portofolio</a>
-            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-gray-700">Hubungi Saya</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800">
+            <a href="#journey" class="block py-2 px-6 text-sm hover:bg-slate-900">Learning Journey</a>
+            <a href="#tracks" class="block py-2 px-6 text-sm hover:bg-slate-900">Learning Tracks</a>
+            <a href="#skills" class="block py-2 px-6 text-sm hover:bg-slate-900">Skills</a>
+            <a href="#portfolio" class="block py-2 px-6 text-sm hover:bg-slate-900">Projects</a>
+            <a href="#contact" class="block py-2 px-6 text-sm hover:bg-slate-900">Contact</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="h-screen min-h-[700px] flex items-center justify-center bg-gray-900 bg-cover bg-center" style="background-image: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?auto=format&fit=crop&q=80');">
+        <section id="home" class="h-screen min-h-[700px] flex items-center justify-center bg-slate-950 bg-cover bg-center" style="background-image: radial-gradient(circle at top, rgba(45,212,191,0.12), transparent 55%), radial-gradient(circle at bottom, rgba(59,130,246,0.18), transparent 55%);">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-center">
                     <!-- Image Column -->
                     <div class="md:order-2 flex justify-center reveal visible">
                         <!-- Profile picture for mobile -->
-                        <img src='img/Farrel_staf.JPG' alt="Foto Profil Farrel" class="md:hidden rounded-full border-4 border-gray-700 shadow-lg w-36 h-36 object-cover mt-8">
+                        <img src="img/Farrel_staf.JPG" alt="Foto Profil Farrel" class="md:hidden rounded-full border-4 border-slate-800 shadow-lg w-36 h-36 object-cover mt-8">
                         <!-- Profile picture for desktop with glow effect -->
                         <div class="hidden md:flex relative w-80 h-80 lg:w-96 lg:h-96">
-                            <div class="absolute inset-0 bg-teal-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-                            <img src='img/Farrel_staf.JPG' alt="Foto Profil Farrel" class="relative rounded-full border-4 border-gray-700 shadow-lg w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-teal-500 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                            <img src="img/Farrel_staf.JPG" alt="Foto Profil Farrel" class="relative rounded-full border-4 border-slate-800 shadow-xl w-full h-full object-cover">
                         </div>
                     </div>
 
                     <!-- Text Column -->
                     <div class="md:order-1 text-center md:text-left reveal visible">
-                        <p class="text-lg md:text-xl text-teal-400 font-semibold">Selamat Datang di Portofolio Saya</p>
-                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mt-2">Farrel Al Faqih Ekatama</h1>
-                        <p class="max-w-xl mx-auto md:mx-0 mt-6 text-gray-300">
-                           Mahasiswa semester 7 Sistem Informasi UPN "Veteran" Jakarta. Saat ini menjabat sebagai Ketua KSM Cyber Security dengan pengalaman magang sebagai Internal Control Officer di Bank Indonesia.
+                        <div class="inline-flex items-center gap-2 bg-slate-900/70 border border-teal-500/30 text-teal-300 pill-soft mb-4">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Learning Path • Cyber Security & IT Governance
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mt-2">
+                            Farrel Al Faqih Ekatama
+                        </h1>
+                        <p class="mt-4 text-sm uppercase tracking-[0.2em] text-slate-400 font-semibold">
+                            Cyber Security • IT Governance • Data & AI
                         </p>
+                        <p class="max-w-xl mx-auto md:mx-0 mt-6 text-slate-300">
+                           Mahasiswa Sistem Informasi semester 7 UPN "Veteran" Jakarta. Saat ini menjabat sebagai Ketua KSM Cyber Security dan pernah magang sebagai Internal Control Officer di Bank Indonesia, mengembangkan aplikasi penilaian kinerja dan dashboard monitoring.
+                        </p>
+                        
+                        <!-- Quick "course stats" e-learning style -->
+                        <div class="mt-6 grid grid-cols-3 gap-4 max-w-md mx-auto md:mx-0 text-xs md:text-sm text-slate-300">
+                            <div class="bg-slate-900/80 border border-slate-800 rounded-xl px-3 py-2 text-left">
+                                <p class="text-slate-400 text-[11px] uppercase tracking-wide">Learning Hours</p>
+                                <p class="font-semibold text-white mt-1">250+ hrs</p>
+                            </div>
+                            <div class="bg-slate-900/80 border border-slate-800 rounded-xl px-3 py-2 text-left">
+                                <p class="text-slate-400 text-[11px] uppercase tracking-wide">Projects</p>
+                                <p class="font-semibold text-white mt-1">10+ cases</p>
+                            </div>
+                            <div class="bg-slate-900/80 border border-slate-800 rounded-xl px-3 py-2 text-left">
+                                <p class="text-slate-400 text-[11px] uppercase tracking-wide">Focus Track</p>
+                                <p class="font-semibold text-white mt-1">Cyber & Governance</p>
+                            </div>
+                        </div>
+
                         <!-- Social Icons -->
                         <div class="mt-8 flex justify-center md:justify-start space-x-6">
                             <a href="https://www.linkedin.com/in/farrel-al-faqih-ekatama/" target="_blank" class="text-gray-400 hover:text-teal-400 transition-colors" title="LinkedIn">
@@ -191,9 +269,13 @@
                                 <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07m0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg>
                             </a>
                         </div>
-                        <div class="mt-10">
-                            <a href="#journey" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 text-lg inline-block">
-                                Pengalaman Saya
+
+                        <div class="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
+                            <a href="#tracks" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 text-sm md:text-base inline-flex items-center gap-2">
+                                Lihat Learning Tracks
+                            </a>
+                            <a href="#portfolio" class="border border-teal-500/60 text-teal-300 hover:bg-teal-500/10 font-semibold py-3 px-6 rounded-full text-sm md:text-base">
+                                Lihat Project Portofolio
                             </a>
                         </div>
                     </div>
@@ -201,10 +283,79 @@
             </div>
         </section>
 
-        <!-- The Timeline -->
+        <!-- Learning Tracks (E-learning vibe) -->
+        <section id="tracks" class="py-20 bg-slate-950/80 border-y border-slate-800">
+            <div class="container mx-auto px-6 text-center reveal">
+                <h2 class="text-3xl font-bold text-white mb-2">Learning Tracks</h2>
+                <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
+                    Jalur pembelajaran utama yang membentuk keahlian saya di bidang Cyber Security, Tata Kelola TI, dan Data & AI.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+                    <!-- Track 1 -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="pill-soft bg-emerald-500/10 text-emerald-300 border border-emerald-500/40">Track 01</span>
+                            <span class="text-[11px] text-slate-400 uppercase tracking-wide">Level • Intermediate</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Cyber Security & Blue Team</h3>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Fokus pada keamanan sistem, analisis ancaman, dan implementasi kontrol untuk menjaga kerahasiaan, integritas, dan ketersediaan informasi.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1">
+                            <li>• KSM Cyber Security (Staf, Wakil Ketua, Ketua)</li>
+                            <li>• Web penetration testing & dasar pengamanan aplikasi</li>
+                            <li>• World Privacy Day & edukasi privasi data</li>
+                        </ul>
+                    </div>
+
+                    <!-- Track 2 -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="pill-soft bg-sky-500/10 text-sky-300 border border-sky-500/40">Track 02</span>
+                            <span class="text-[11px] text-slate-400 uppercase tracking-wide">Level • Intermediate</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">IT Governance & Internal Control</h3>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Menganalisis tata kelola TI, risiko, dan kontrol internal untuk memastikan TI selaras dengan tujuan organisasi.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1">
+                            <li>• Audit COBIT 2019 & ISO 27002:2022</li>
+                            <li>• Magang Internal Control Officer – Bank Indonesia</li>
+                            <li>• Pengembangan aplikasi penilaian ICK & monitoring</li>
+                        </ul>
+                    </div>
+
+                    <!-- Track 3 -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="pill-soft bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/40">Track 03</span>
+                            <span class="text-[11px] text-slate-400 uppercase tracking-wide">Level • Intermediate</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Data, Analytics & AI</h3>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Menggunakan data untuk pengambilan keputusan, visualisasi, dan eksperimen sederhana dengan kecerdasan buatan.
+                        </p>
+                        <ul class="text-xs text-slate-400 space-y-1">
+                            <li>• Segmentasi pelanggan (Pentaho, MySQL, Looker Studio)</li>
+                            <li>• Dashboard IKU & ICK (Power BI, Excel)</li>
+                            <li>• Proyek AI untuk deteksi stres berbasis teks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Timeline (Learning Journey) -->
         <section id="journey" class="py-20">
+            <div class="container mx-auto px-6 text-center mb-10">
+                <h2 class="text-3xl font-bold text-white mb-2">Learning Journey</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Gambaran perjalanan belajar saya dari awal kuliah hingga pengalaman organisasi dan magang, disusun seperti timeline progres e-learning.
+                </p>
+            </div>
+
             <div class="timeline-container">
-                
                 <!-- Item: Pendidikan -->
                 <div class="timeline-item left reveal">
                     <div class="dot"></div>
@@ -212,7 +363,7 @@
                         <span class="item-badge">Pendidikan</span>
                         <h3 class="text-xl font-bold text-white">Sistem Informasi, UPN "Veteran" Jakarta</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Agu 2022 - Sekarang</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Mahasiswa aktif dengan minat pada audit, keamanan siber, dan machine learning.</p>
+                        <p class="text-slate-300 mt-3 hidden md:block">Mahasiswa aktif dengan minat pada audit, keamanan siber, dan machine learning.</p>
                         <img src="img/Kampus_Upnvj.jpg" alt="Foto Kampus UPNVJ" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
@@ -224,31 +375,31 @@
                         <span class="item-badge">Organisasi</span>
                         <h3 class="text-xl font-bold text-white">Staf PSDM – KSM Cyber Security</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Feb 2023 - Jan 2024</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Mengelola pengembangan sumber daya manusia, mulai dari rekrutmen hingga pemantauan kinerja pengurus.</p>
+                        <p class="text-slate-300 mt-3 hidden md:block">Mengelola pengembangan sumber daya manusia, mulai dari rekrutmen hingga pemantauan kinerja pengurus.</p>
                         <img src="img/PSDM.jpeg" alt="Foto Kegiatan PSDM" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
                 
                 <!-- Item: BEM UPNVJ -->
-                 <div class="timeline-item left reveal">
+                <div class="timeline-item left reveal">
                     <div class="dot"></div>
                     <div class="timeline-content">
                         <span class="item-badge">Organisasi</span>
                         <h3 class="text-xl font-bold text-white">Staf SPPI, BEM UPN "Veteran" Jakarta</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Jan 2024 - Jan 2025</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Bertanggung jawab mengawasi dan memastikan anggota BEM menjalankan SOP serta membantu mengatasi masalah melalui audiensi dan evaluasi.</p>
+                        <p class="text-slate-300 mt-3 hidden md:block">Bertanggung jawab mengawasi dan memastikan anggota BEM menjalankan SOP serta membantu mengatasi masalah melalui audiensi dan evaluasi.</p>
                         <img src="img/SPPI.jpg" alt="Foto BEM UPNVJ" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
                 
-                 <!-- Item: Vice President KSM -->
+                <!-- Item: Vice President KSM -->
                 <div class="timeline-item right reveal">
                     <div class="dot"></div>
                     <div class="timeline-content">
                         <span class="item-badge">Organisasi</span>
                         <h3 class="text-xl font-bold text-white">Wakil Ketua KSM Cyber Security</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Jan 2024 - Jan 2025</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Membantu ketua dalam pengawasan, serta memimpin acara pelatihan CTF dan menjadi steering committee pengembangan website e-learning.</p>
+                        <p class="text-slate-300 mt-3 hidden md:block">Membantu ketua dalam pengawasan, serta memimpin acara pelatihan CTF dan menjadi steering committee pengembangan website e-learning.</p>
                         <img src="img/WakilKetua.jpg" alt="Foto Kegiatan KSM Cyber Security" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
@@ -260,8 +411,8 @@
                         <span class="item-badge">Acara</span>
                         <h3 class="text-xl font-bold text-white">Panitia World Privacy Day</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Februari 2025</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Terlibat dalam kepanitiaan acara World Privacy Day, membantu persiapan dan pelaksanaan konferensi untuk meningkatkan kesadaran privasi data.</p>
-                        <img src="img/privacyday.jpg" alt="Logo World Privacy Day" class="mt-4 rounded-lg w-full h-auto object-cover">
+                        <p class="text-slate-300 mt-3 hidden md:block">Terlibat dalam kepanitiaan acara World Privacy Day, membantu persiapan dan pelaksanaan konferensi untuk meningkatkan kesadaran privasi data.</p>
+                        <img src="img/privacyday.jpg" alt="Logo World Privacy Day" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
 
@@ -272,7 +423,7 @@
                         <span class="item-badge">Organisasi</span>
                         <h3 class="text-xl font-bold text-white">Ketua KSM Cyber Security</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Jan 2025 - Sekarang</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Sebagai pengambil kebijakan tertinggi, bertugas mengawasi seluruh kegiatan, memastikan koordinasi antar divisi, dan menjadi representasi resmi KSM.</p>
+                        <p class="text-slate-300 mt-3 hidden md:block">Sebagai pengambil kebijakan tertinggi, bertugas mengawasi seluruh kegiatan, memastikan koordinasi antar divisi, dan menjadi representasi resmi KSM.</p>
                         <img src="img/Ketua.jpg" alt="Foto sebagai Ketua KSM" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
@@ -284,8 +435,8 @@
                         <span class="item-badge">Magang</span>
                         <h3 class="text-xl font-bold text-white">Internal Control Officer - Bank Indonesia</h3>
                         <p class="text-sm text-teal-400 font-semibold mt-1">Jan 2025 - Jul 2025</p>
-                        <p class="text-gray-400 mt-3 hidden md:block">Mengembangkan aplikasi penilaian Indikator Capaian Kinerja (ICK), mulai dari identifikasi kebutuhan, perancangan arsitektur, hingga pengembangan dan evaluasi.</p>
-                        <img src="img/BankIndonesia.jpg" alt="Logo Bank Indonesia" class="mt-4 rounded-lg w-full h-auto object-cover">
+                        <p class="text-slate-300 mt-3 hidden md:block">Mengembangkan aplikasi penilaian Indikator Capaian Kinerja (ICK) mulai dari identifikasi kebutuhan, perancangan arsitektur, hingga pengembangan dan evaluasi.</p>
+                        <img src="img/BankIndonesia.jpg" alt="Logo Bank Indonesia" class="mt-4 rounded-lg w-full h-auto object-cover" onerror="this.style.display='none'">
                     </div>
                 </div>
                 
@@ -293,105 +444,111 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-gray-900/50">
-             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl font-bold text-white text-center mb-2">Area Keahlian</h2>
-                 <p class="text-gray-400 mb-12">Beberapa keahlian yang saya kuasai.</p>
-                 <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto reveal">
-                    <span class="bg-gray-700 text-teal-300 text-base font-medium px-5 py-3 rounded-lg">Analisis Data</span>
-                    <span class="bg-gray-700 text-teal-300 text-base font-medium px-5 py-3 rounded-lg">Keamanan Siber</span>
-                    <span class="bg-gray-700 text-teal-300 text-base font-medium px-5 py-3 rounded-lg">Kecerdasan Buatan</span>
-                    <span class="bg-gray-700 text-teal-300 text-base font-medium px-5 py-3 rounded-lg">Audit SI/TI</span>
-                    <span class="bg-gray-700 text-teal-300 text-base font-medium px-5 py-3 rounded-lg">Tata Kelola TI</span>
-                    <span class="bg-gray-700 text-teal-300 text-base font-medium px-5 py-3 rounded-lg">Kerangka Kerja (COBIT, ITIL, ISO 27002)</span>
-                 </div>
-             </div>
+        <section id="skills" class="py-20 bg-slate-950/80 border-y border-slate-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-2">Area Keahlian</h2>
+                <p class="text-slate-400 mb-10">Beberapa keahlian utama yang membentuk fondasi profesional saya.</p>
+                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto reveal">
+                    <span class="bg-slate-900 text-teal-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Analisis Data</span>
+                    <span class="bg-slate-900 text-teal-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Keamanan Siber</span>
+                    <span class="bg-slate-900 text-teal-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Kecerdasan Buatan</span>
+                    <span class="bg-slate-900 text-teal-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Audit SI/TI</span>
+                    <span class="bg-slate-900 text-teal-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Tata Kelola TI</span>
+                    <span class="bg-slate-900 text-teal-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">COBIT, ITIL, ISO 27002</span>
+                </div>
+            </div>
         </section>
 
         <!-- Tools Section -->
         <section id="tools" class="py-20">
-             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl font-bold text-white text-center mb-2">Alat & Teknologi</h2>
-                 <p class="text-gray-400 mb-12">Beberapa alat dan teknologi yang saya kuasai.</p>
-                 <div class="max-w-4xl mx-auto reveal">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-2">Alat & Teknologi</h2>
+                <p class="text-slate-400 mb-12">Tools yang sering saya gunakan dalam proyek dan pembelajaran.</p>
+                <div class="max-w-4xl mx-auto reveal">
                     <div class="mb-8">
                         <h3 class="text-xl font-semibold text-teal-400 mb-4">Keamanan Siber</h3>
                         <div class="flex flex-wrap justify-center gap-4">
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Wazuh</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Wireshark</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">ZAP</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Wazuh</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Wireshark</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">ZAP</span>
                         </div>
                     </div>
                     <div class="mb-8">
                         <h3 class="text-xl font-semibold text-teal-400 mb-4">Analisis & Visualisasi Data</h3>
                         <div class="flex flex-wrap justify-center gap-4">
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">SPSS</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Looker Studio</span>
-                             <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Power BI</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Pentaho</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Excel</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">SPSS</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Looker Studio</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Power BI</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Pentaho</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Excel</span>
                         </div>
                     </div>
                     <div>
                         <h3 class="text-xl font-semibold text-teal-400 mb-4">Multimedia & Desain</h3>
                         <div class="flex flex-wrap justify-center gap-4">
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Adobe Illustrator</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">CapCut</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Canva</span>
-                            <span class="bg-gray-800 text-gray-300 text-base font-medium px-5 py-3 rounded-lg">Figma</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Adobe Illustrator</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">CapCut</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Canva</span>
+                            <span class="bg-slate-900 text-gray-300 text-base font-medium px-5 py-3 rounded-lg border border-slate-700">Figma</span>
                         </div>
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
         </section>
         
         <!-- Portfolio Section -->
-        <section id="portfolio" class="py-20 bg-gray-900/50">
+        <section id="portfolio" class="py-20 bg-slate-950/80 border-y border-slate-800">
             <div class="container mx-auto px-6 text-center reveal">
-                <h2 class="text-3xl font-bold text-white text-center mb-2">Portofolio Proyek</h2>
-                <p class="text-gray-400 mb-12">Berikut adalah beberapa proyek yang pernah saya kerjakan.</p>
+                <h2 class="text-3xl font-bold text-white mb-2">Project Portofolio</h2>
+                <p class="text-slate-400 mb-12">Kumpulan proyek yang saya kerjakan sebagai bentuk aplikasi dari learning tracks di atas.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
                     <!-- Portfolio Item 1 -->
-                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                    <div class="bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col border border-slate-800">
+                        <span class="pill-soft bg-sky-500/10 text-sky-300 border border-sky-500/40 mb-3 inline-block text-[11px]">Governance Case Study</span>
                         <img src="img/Penmaru.jpeg" alt="Gambar Proyek Tata Kelola PENMARU" class="rounded-md mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-bold text-white">Analisis Tata Kelola TI PENMARU</h3>
-                        <p class="text-gray-400 mt-2 text-sm flex-grow">Melakukan analisis tata kelola TI untuk menilai kepuasan pengguna terhadap layanan TI pada sistem PENMARU menggunakan kerangka kerja COBIT 2019.</p>
-                        <a href="https://drive.google.com/file/d/1WBUjwqZFAfj-oOFwhs7dru7gK31r4cbl/view?usp=drive_link" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold">Lihat Detail &rarr;</a>
+                        <p class="text-slate-300 mt-2 text-sm flex-grow">Analisis tata kelola TI untuk menilai kepuasan pengguna terhadap layanan TI pada sistem PENMARU menggunakan kerangka kerja COBIT 2019.</p>
+                        <a href="https://drive.google.com/file/d/1WBUjwqZFAfj-oOFwhs7dru7gK31r4cbl/view?usp=drive_link" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold text-sm">Lihat Detail &rarr;</a>
                     </div>
                     <!-- Portfolio Item 2 -->
-                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                    <div class="bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col border border-slate-800">
+                        <span class="pill-soft bg-sky-500/10 text-sky-300 border border-sky-500/40 mb-3 inline-block text-[11px]">IT Service & Security</span>
                         <img src="img/RSAU.jpeg" alt="Gambar Proyek Audit RSAU" class="rounded-md mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-bold text-white">Evaluasi Keamanan & Layanan TI RSAU</h3>
-                        <p class="text-gray-400 mt-2 text-sm flex-grow">Menganalisis kematangan kontrol keamanan sistem informasi dan manajemen layanan TI di RSAU Hasan Toto menggunakan kerangka kerja ITIL V4 dan ISO 27002:2022.</p>
-                        <a href="https://drive.google.com/drive/folders/1BVyVf9kLcook6RkSn7quHB0hYrh_6swT?usp=drive_link" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold">Lihat Detail &rarr;</a>
+                        <p class="text-slate-300 mt-2 text-sm flex-grow">Menganalisis kematangan kontrol keamanan sistem informasi dan manajemen layanan TI di RSAU Hasan Toto menggunakan ITIL v4 dan ISO 27002:2022.</p>
+                        <a href="https://drive.google.com/drive/folders/1BVyVf9kLcook6RkSn7quHB0hYrh_6swT?usp=drive_link" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold text-sm">Lihat Detail &rarr;</a>
                     </div>
                     <!-- Portfolio Item 3 -->
-                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col">
+                    <div class="bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col border border-slate-800">
+                        <span class="pill-soft bg-emerald-500/10 text-emerald-300 border border-emerald-500/40 mb-3 inline-block text-[11px]">Customer Analytics</span>
                         <img src="img/Spendingscore.jpeg" alt="Gambar Proyek Segmentasi Pelanggan" class="rounded-md mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-bold text-white">Segmentasi Pelanggan</h3>
-                        <p class="text-gray-400 mt-2 text-sm flex-grow">Mengelompokkan pelanggan ke dalam tiga kelas berdasarkan skor pengeluaran untuk mengidentifikasi karakteristik setiap kelas menggunakan Pentaho, MySQL, dan Looker.</p>
-                        <a href="https://drive.google.com/drive/folders/16Cj-78Un1Zsci5snusa0ko45nMVJl26D?usp=drive_link" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold">Lihat Detail &rarr;</a>
+                        <p class="text-slate-300 mt-2 text-sm flex-grow">Mengelompokkan pelanggan ke dalam tiga kelas berdasarkan skor pengeluaran untuk mengidentifikasi karakteristik setiap kelas menggunakan Pentaho, MySQL, dan Looker Studio.</p>
+                        <a href="https://drive.google.com/drive/folders/16Cj-78Un1Zsci5snusa0ko45nMVJl26D?usp=drive_link" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold text-sm">Lihat Detail &rarr;</a>
                     </div>
                     <!-- Portfolio Item 4 -->
-                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col border border-slate-800">
+                        <span class="pill-soft bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/40 mb-3 inline-block text-[11px]">AI Project</span>
                         <img src="img/AiStress.jpeg" alt="Gambar Proyek Deteksi Stres" class="rounded-md mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-bold text-white">AI untuk Deteksi Stres</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Mengimplementasikan NLP dan machine learning (Naive Bayes) dengan Python untuk menganalisis teks dari pengguna dan mendeteksi apakah mereka mengalami stres.</p>
-                        <a href="" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold">Lihat Detail &rarr;</a>
+                        <p class="text-slate-300 mt-2 text-sm flex-grow">Mengimplementasikan NLP dan Naive Bayes dengan Python untuk menganalisis teks pengguna dan mendeteksi indikasi stres.</p>
+                        <a href="" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold text-sm">Lihat Detail &rarr;</a>
                     </div>
                     <!-- Portfolio Item 5 -->
-                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col border border-slate-800">
+                        <span class="pill-soft bg-emerald-500/10 text-emerald-300 border border-emerald-500/40 mb-3 inline-block text-[11px]">Learning Platform</span>
                         <img src="img/E-Learning.jpeg" alt="Gambar Proyek Website E-Learning" class="rounded-md mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-bold text-white">Website E-Learning Keamanan Siber</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Bertindak sebagai komite pengarah untuk memastikan platform sesuai tujuan, memetakan kebutuhan, dan merancang arsitektur website menggunakan Draw.io.</p>
-                        <a href="" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold">Lihat Detail &rarr;</a>
+                        <p class="text-slate-300 mt-2 text-sm flex-grow">Bertindak sebagai steering committee untuk memetakan kebutuhan, struktur konten, dan arsitektur website e-learning menggunakan Draw.io.</p>
+                        <a href="" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold text-sm">Lihat Detail &rarr;</a>
                     </div>
                     <!-- Portfolio Item 6 -->
-                    <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-teal-500/20 transition-all duration-300 transform hover:-translate-y-2 flex flex-col border border-slate-800">
+                        <span class="pill-soft bg-red-500/10 text-red-300 border border-red-500/40 mb-3 inline-block text-[11px]">Web Security</span>
                         <img src="img/Keamanan.jpeg" alt="Gambar Proyek Keamanan Website" class="rounded-md mb-4 w-full h-48 object-cover">
                         <h3 class="text-xl font-bold text-white">Pengamanan Website Dasar</h3>
-                        <p class="text-gray-400 mt-2 text-sm">Mengamankan website dengan menganalisis dan mengurangi jumlah peringatan kerentanan dari 10 menjadi 5 menggunakan ZAP sebagai bagian dari tugas ujian akhir.</p>
-                        <a href="" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold">Lihat Detail &rarr;</a>
+                        <p class="text-slate-300 mt-2 text-sm flex-grow">Mengurangi jumlah peringatan kerentanan dari 10 menjadi 5 menggunakan ZAP sebagai bagian dari tugas ujian akhir.</p>
+                        <a href="" target="_blank" class="text-teal-400 hover:text-teal-300 mt-4 inline-block font-semibold text-sm">Lihat Detail &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -400,76 +557,77 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20">
             <div class="container mx-auto px-6 text-center reveal">
-                 <h2 class="text-3xl font-bold text-white text-center mb-2">Hubungi Saya</h2>
-                 <p class="max-w-2xl mx-auto mt-4 text-gray-400 mb-8">
-                     Hubungi Saya jika tertarik untuk berkolaborasi dan bekerja sama.
-                 </p>
-                 <div class="mt-8 flex justify-center items-center gap-6 flex-wrap">
-                     <div class="flex items-center gap-3 text-lg">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                         <a href="mailto:farrelalfaqih.fae@gmail.com" class="text-white hover:text-teal-400 transition-colors">farrelalfaqih.fae@gmail.com</a>
-                     </div>
-                      <div class="flex items-center gap-3 text-lg">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                         <span class="text-white">+6285162688996</span>
-                     </div>
-                 </div>
+                <h2 class="text-3xl font-bold text-white mb-2">Hubungi Saya</h2>
+                <p class="max-w-2xl mx-auto mt-4 text-slate-400 mb-8">
+                    Tertarik berkolaborasi dalam proyek keamanan siber, tata kelola TI, atau data & AI? Silakan hubungi saya.
+                </p>
+                <div class="mt-8 flex justify-center items-center gap-6 flex-wrap">
+                    <div class="flex items-center gap-3 text-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <a href="mailto:farrelalfaqih.fae@gmail.com" class="text-white hover:text-teal-400 transition-colors">farrelalfaqih.fae@gmail.com</a>
+                    </div>
+                    <div class="flex items-center gap-3 text-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span class="text-white">+6285162688996</span>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto px-6 py-6 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Farrel Al Faqih Ekatama. All Rights Reserved.</p>
+    <footer class="bg-slate-950 border-t border-slate-800">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500 text-sm">
+            <p>&copy; 2025 Farrel Al Faqih Ekatama. Learning Profile. All Rights Reserved.</p>
         </div>
     </footer>
 
     <!-- Modal -->
-    <div id="timeline-modal" class="modal-overlay opacity-0 pointer-events-none">
+    <div id="timeline-modal" class="modal-overlay">
         <div class="modal-content">
-            <img id="modal-img" src="" alt="Detail Gambar" class="w-full h-64 object-cover">
+            <img id="modal-img" src="" alt="Detail Gambar" class="w-full h-64 object-cover rounded-t-lg">
             <div class="p-6">
                 <h3 id="modal-title" class="text-2xl font-bold text-white"></h3>
                 <p id="modal-date" class="text-md text-teal-400 font-semibold mt-1"></p>
-                <p id="modal-desc" class="text-gray-300 mt-4"></p>
-                <button id="modal-close" class="mt-6 bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors w-full">Tutup</button>
+                <p id="modal-desc" class="text-slate-300 mt-4 text-sm leading-relaxed"></p>
+                <button id="modal-close" class="mt-6 bg-teal-500 hover:bg-teal-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors w-full text-sm">
+                    Tutup
+                </button>
             </div>
         </div>
     </div>
-
 
     <script>
         // --- Full Descriptions for Modal ---
         const descriptions = {
             "Sistem Informasi, UPN \"Veteran\" Jakarta": "Memulai perjalanan akademis saya, fokus pada analisis data, machine learning, dan tata kelola TI. Aktif berpartisipasi dan menjadi pembicara di berbagai seminar.",
-            "Staf PSDM – KSM Cyber Security": "Sebagai staf Pengembangan Sumber Daya Manusia (PSDM), saya memiliki tanggung jawab utama untuk mengelola pengembangan sumber daya manusia, mulai dari melakukan rekrutmen terbuka, memantau kinerja pengurus, hingga menyelenggarakan sesi berbagi dengan alumni untuk membangun kepengurusan yang solid dan produktif.",
-            "Staf SPPI, BEM UPN \"Veteran\" Jakarta": "Sebagai Staf Satuan Pengendali dan Pengembangan Internal, saya bertanggung jawab untuk mengawasi dan memastikan bahwa setiap anggota BEM UPNVJ telah menjalankan SOP. Saya juga membantu mengatasi krisis atau masalah melalui audiensi dan rapat evaluasi bulanan.",
-            "Wakil Ketua KSM Cyber Security": "Sebagai wakil ketua, saya bertanggung jawab membantu peran ketua dalam pengawasan dan koordinasi. Selain itu, saya terpilih sebagai ketua acara pelatihan Capture the Flag volume 1 dan menjadi steering committee dalam pengembangan website e-learning Cyber Security.",
-            "Panitia World Privacy Day": "Terlibat dalam kepanitiaan acara World Privacy Day, membantu persiapan dan pelaksanaan konferensi untuk meningkatkan kesadaran akan pentingnya privasi data di era digital.",
-            "Ketua KSM Cyber Security": "Sebagai Ketua, saya bertanggung jawab sebagai pengambil kebijakan tertinggi dan pemimpin umum. Tugas utama saya adalah mengawasi jalannya seluruh kegiatan, memastikan koordinasi antar divisi berjalan efektif, serta menetapkan arah strategis organisasi dan menjadi representasi resmi KSM.",
-            "Internal Control Officer - Bank Indonesia": "Bertanggung jawab mengembangkan aplikasi penilaian Indikator Capaian Kinerja (ICK) untuk keperluan internal. Prosesnya mencakup identifikasi kebutuhan melalui wawancara, perancangan arsitektur database, pemilihan tools, perencanaan fitur, alur penilaian, desain UI/UX, hingga pengembangan dan evaluasi aplikasi bersama mentor dan pengguna."
+            "Staf PSDM – KSM Cyber Security": "Sebagai staf Pengembangan Sumber Daya Manusia (PSDM), saya mengelola proses rekrutmen terbuka, memantau kinerja pengurus, dan menyelenggarakan sesi berbagi dengan alumni untuk membangun kepengurusan yang solid dan produktif.",
+            "Staf SPPI, BEM UPN \"Veteran\" Jakarta": "Sebagai Staf Satuan Pengendali dan Pengembangan Internal, saya bertanggung jawab memastikan setiap anggota BEM UPNVJ menjalankan SOP dan membantu mengatasi krisis melalui audiensi dan rapat evaluasi bulanan.",
+            "Wakil Ketua KSM Cyber Security": "Sebagai wakil ketua, saya membantu pengawasan dan koordinasi lintas divisi. Saya juga memimpin pelatihan Capture the Flag (CTF) Volume 1 dan menjadi steering committee dalam pengembangan website e-learning Cyber Security.",
+            "Panitia World Privacy Day": "Terlibat dalam kepanitiaan World Privacy Day, membantu persiapan materi, publikasi, dan pelaksanaan konferensi untuk meningkatkan awareness terkait pentingnya privasi data di era digital.",
+            "Ketua KSM Cyber Security": "Sebagai Ketua, saya bertanggung jawab sebagai pengambil kebijakan tertinggi dan pemimpin umum organisasi. Saya memastikan seluruh program berjalan sesuai visi-misi, menjaga koordinasi antar divisi, dan merepresentasikan KSM dalam forum internal maupun eksternal.",
+            "Internal Control Officer - Bank Indonesia": "Mengembangkan aplikasi penilaian Indikator Capaian Kinerja (ICK) untuk keperluan internal. Proses mencakup wawancara kebutuhan, perancangan arsitektur database, pemilihan tools (PowerApps & Power BI), perencanaan fitur, desain UI/UX, hingga pengujian dan evaluasi bersama mentor dan pengguna."
         };
-
 
         // --- General UI Script ---
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
         document.querySelectorAll('#mobile-menu a, nav a').forEach(link => {
             link.addEventListener('click', (e) => { 
-                if (link.href.includes("#")) {
+                if (link.getAttribute('href') && link.getAttribute('href').startsWith("#")) {
                     e.preventDefault();
                     const targetId = link.getAttribute('href');
                     const targetElement = document.querySelector(targetId);
                     if(targetElement) {
                         targetElement.scrollIntoView({ behavior: 'smooth' });
                     }
-                    if(mobileMenu.classList.contains('hidden') === false) {
+                    if(!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
                 }
@@ -500,20 +658,19 @@
             item.addEventListener('click', () => {
                 const title = item.querySelector('h3').innerText;
                 const date = item.querySelector('p').innerText;
-                const imgSrc = item.querySelector('img').src;
-                
+                const img = item.querySelector('img');
+                const imgSrc = img ? img.src : "";
+
                 modalTitle.innerText = title;
                 modalDate.innerText = date;
                 modalImg.src = imgSrc;
-                modalDesc.innerText = descriptions[title] || "Deskripsi tidak tersedia."; // Fallback
+                modalDesc.innerText = descriptions[title] || "Deskripsi tidak tersedia.";
 
-                modal.classList.remove('opacity-0', 'pointer-events-none');
                 modal.classList.add('active');
-            });sazqsxa
+            });
         });
 
         const closeModal = () => {
-            modal.classList.add('opacity-0', 'pointer-events-none');
             modal.classList.remove('active');
         };
 
@@ -523,7 +680,6 @@
                 closeModal();
             }
         });
-
     </script>
 
 </body>
