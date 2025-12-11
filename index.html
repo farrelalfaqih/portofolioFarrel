@@ -50,7 +50,6 @@
           <!-- Logo + Brand -->
           <div class="flex items-center gap-4">
             <div class="w-16 h-16 rounded-2xl border border-borderlight flex items-center justify-center bg-white">
-              <!-- Ganti logo sesuai kebutuhan -->
               <img src="img/Farrel_staf.JPG" alt="Logo" class="w-14 h-14 object-cover rounded-xl">
             </div>
             <div class="font-lexend leading-tight">
@@ -101,71 +100,75 @@
       </div>
     </header>
 
-    <!-- HERO / INTRO -->
-    <section id="home" class="relative bg-softgreen/60 pt-10 pb-16">
-      <div class="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-10">
-        <!-- Left text -->
-        <div class="flex-1 space-y-6">
-          <p class="font-lexend text-primary text-lg md:text-xl font-semibold">
-            Cyber Security • IT Governance • Data & AI • Website & Apps
-          </p>
-          <h1 class="font-lexend text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-snug">
-            <span class="text-black font-medium">Farrel Al Faqih Ekatama</span><br/>
-            <span class="text-primary font-medium">Mahasiswa Sistem Informasi &</span><br/>
-            <span class="text-black font-medium">IT Enthusiast</span>
-          </h1>
-          <p class="font-mont text-base md:text-lg text-gray-700 max-w-xl">
-            Mahasiswa semester 7 Sistem Informasi UPN "Veteran" Jakarta. Aktif di dunia keamanan siber dan tata kelola TI, 
-            menjabat sebagai Ketua KSM Cyber Security dengan pengalaman magang sebagai Internal Control Officer di Bank Indonesia 
-            dengan fokus pada pengembangan aplikasi penilaian kinerja dan dashboard monitoring.
-          </p>
+    <!-- HERO / INTRO (SUDAH DIBENERIN) -->
+    <section id="home" class="relative bg-softgreen/60 pt-12 pb-16">
+      <div class="max-w-7xl mx-auto px-4 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 items-center">
 
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#projects"
-               class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-primary text-white font-mont text-lg font-semibold shadow-md
-                      transition-all duration-200 hover:bg-white hover:text-primary hover:border hover:border-primary">
-              Lihat Proyek
-            </a>
-            <a href="#journey"
-               class="inline-flex items-center justify-center px-6 py-3 rounded-2xl border border-primary bg-white text-primary font-mont text-lg font-semibold
-                      transition-all duration-200 hover:bg-primary hover:text-white">
-              Perjalanan Saya
-            </a>
-          </div>
-
-          <!-- Info mini (seperti e-learning metrics) -->
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-            <div class="bg-white rounded-2xl border border-borderlight px-4 py-3">
-              <p class="text-xs text-muted uppercase tracking-wide font-semibold">Pengalaman</p>
-              <p class="text-xl font-lexend font-semibold text-black mt-1">3+ Tahun</p>
-              <p class="text-xs text-muted">Organisasi & project</p>
-            </div>
-            <div class="bg-white rounded-2xl border border-borderlight px-4 py-3">
-              <p class="text-xs text-muted uppercase tracking-wide font-semibold">Fokus</p>
-              <p class="text-xl font-lexend font-semibold text-black mt-1">Cyber & Audit</p>
-              <p class="text-xs text-muted">Security & governance</p>
-            </div>
-            <div class="bg-white rounded-2xl border border-borderlight px-4 py-3 hidden md:block">
-              <p class="text-xs text-muted uppercase tracking-wide font-semibold">Project</p>
-              <p class="text-xl font-lexend font-semibold text-black mt-1">10+ Proyek</p>
-              <p class="text-xs text-muted">Akademik & organisasi</p>
+          <!-- FOTO: di atas pada mobile, di kanan pada desktop -->
+          <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 flex items-center justify-center">
+              <div class="absolute inset-0 rounded-3xl bg-primary/20 blur-3xl -z-10"></div>
+              <img src="img/Farrel_staf.JPG"
+                   alt="Foto Farrel"
+                   class="w-full h-full rounded-3xl object-cover border-4 border-white shadow-xl">
             </div>
           </div>
-        </div>
 
-        <!-- Right image -->
-        <div class="flex-1 flex justify-center lg:justify-end">
-          <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
-            <div class="absolute inset-0 rounded-3xl bg-primary/20 blur-3xl -z-10"></div>
-            <img src="img/Farrel_staf.JPG"
-                 alt="Foto Farrel"
-                 class="w-full h-full rounded-3xl object-cover border-4 border-white shadow-xl">
+          <!-- TEKS: di bawah pada mobile, di kiri pada desktop -->
+          <div class="order-2 lg:order-1 space-y-6">
+            <p class="font-lexend text-primary text-lg md:text-xl font-semibold">
+              Cyber Security • IT Governance • Data & AI • Website & Apps
+            </p>
+            <h1 class="font-lexend text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-snug">
+              <span class="text-black font-medium">Farrel Al Faqih Ekatama</span><br/>
+              <span class="text-primary font-medium">Mahasiswa Sistem Informasi &</span><br/>
+              <span class="text-black font-medium">IT Enthusiast</span>
+            </h1>
+            <p class="font-mont text-base md:text-lg text-gray-700 max-w-xl">
+              Mahasiswa semester 7 Sistem Informasi UPN "Veteran" Jakarta. Aktif di dunia keamanan siber dan tata kelola TI, 
+              menjabat sebagai Ketua KSM Cyber Security dengan pengalaman magang sebagai Internal Control Officer di Bank Indonesia 
+              dengan fokus pada pengembangan aplikasi penilaian kinerja dan dashboard monitoring.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#projects"
+                 class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-primary text-white font-mont text-lg font-semibold shadow-md
+                        transition-all duration-200 hover:bg-white hover:text-primary hover:border hover:border-primary">
+                Lihat Proyek
+              </a>
+              <a href="#journey"
+                 class="inline-flex items-center justify-center px-6 py-3 rounded-2xl border border-primary bg-white text-primary font-mont text-lg font-semibold
+                        transition-all duration-200 hover:bg-primary hover:text-white">
+                Perjalanan Saya
+              </a>
+            </div>
+
+            <!-- Info mini -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+              <div class="bg-white rounded-2xl border border-borderlight px-4 py-3">
+                <p class="text-xs text-muted uppercase tracking-wide font-semibold">Pengalaman</p>
+                <p class="text-xl font-lexend font-semibold text-black mt-1">3+ Tahun</p>
+                <p class="text-xs text-muted">Organisasi & project</p>
+              </div>
+              <div class="bg-white rounded-2xl border border-borderlight px-4 py-3">
+                <p class="text-xs text-muted uppercase tracking-wide font-semibold">Fokus</p>
+                <p class="text-xl font-lexend font-semibold text-black mt-1">Cyber & Audit</p>
+                <p class="text-xs text-muted">Security & governance</p>
+              </div>
+              <div class="bg-white rounded-2xl border border-borderlight px-4 py-3 hidden md:block">
+                <p class="text-xs text-muted uppercase tracking-wide font-semibold">Project</p>
+                <p class="text-xl font-lexend font-semibold text-black mt-1">10+ Proyek</p>
+                <p class="text-xs text-muted">Akademik & organisasi</p>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- "TRACK" KEAHLIAN -->
+    <!-- TRACK KEAHLIAN -->
     <section class="bg-white py-10">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <div class="rounded-3xl bg-softgreen px-4 sm:px-6 lg:px-10 py-6 flex flex-wrap gap-4 justify-between">
@@ -221,8 +224,7 @@
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
-
-          <!-- Pendidikan -->
+          <!-- cards journey (tidak diubah) -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/Pendidikan.jpg" class="w-full h-40 object-cover rounded-xl" alt="Pendidikan">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Pendidikan</span>
@@ -233,7 +235,6 @@
             </p>
           </article>
 
-          <!-- Magang BI -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/BankIndonesia.jpg" class="w-full h-40 object-cover rounded-xl" alt="Magang BI">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Magang</span>
@@ -244,7 +245,6 @@
             </p>
           </article>
 
-          <!-- Ketum KSM -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/KetuaKSM.jpg" class="w-full h-40 object-cover rounded-xl" alt="Ketua KSM">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
@@ -255,18 +255,16 @@
             </p>
           </article>
 
-          <!-- Acara Privacy Day -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/PSDM.jpg" class="w-full h-40 object-cover rounded-xl" alt="World Privacy Day">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Acara</span>
             <h3 class="font-lexend text-xl text-black">Liaison Officer World Privacy Day by Privasimu</h3>
             <p class="text-sm text-muted font-mont">Februari 2025</p>
             <p class="text-sm font-mont text-gray-800">
-            Mendampingi dan mengelola kebutuhan narasumber selama seminar untuk memastikan acara dapat berjalan lancar.
+              Mendampingi dan mengelola kebutuhan narasumber selama seminar untuk memastikan acara dapat berjalan lancar.
             </p>
           </article>
 
-          <!-- Organisasi Wakil Ketua KSM -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/PSDM.jpg" class="w-full h-40 object-cover rounded-xl" alt="Wakil Ketua KSM">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
@@ -277,18 +275,16 @@
             </p>
           </article>
 
-          <!-- Organisasi SPPI BEM UPNVJ -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/WorldPrivacyDay.jpg" class="w-full h-40 object-cover rounded-xl" alt="SPPI BEM UPNVJ">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Acara</span>
             <h3 class="font-lexend text-xl text-black">Staff SPPI BEM UPN Veteran Jakarta</h3>
             <p class="text-sm text-muted font-mont">2024 - 2025</p>
             <p class="text-sm font-mont text-gray-800">
-              Bertanggung jawab mengawasi dan memastikan anggota BEM menjalankan SOP serta membantu mengatasi masalah melalui audiensi dan evaluasi. Membuat digitalisasi penilaian melalui spreedsheet.
+              Bertanggung jawab mengawasi dan memastikan anggota BEM menjalankan SOP serta membantu mengatasi masalah melalui audiensi dan evaluasi. Membuat digitalisasi penilaian melalui spreadsheet.
             </p>
           </article>
 
-          <!-- Organisasi PSDM Cyber Security -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/ELearning.jpg" class="w-full h-40 object-cover rounded-xl" alt="PSDM Cyber Security">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
@@ -299,7 +295,6 @@
             </p>
           </article>
 
-          <!-- Organisasi OSIS SMAN 10 Bogor -->
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
             <img src="img/ELearning.jpg" class="w-full h-40 object-cover rounded-xl" alt="OSIS SMAN 10">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
@@ -310,7 +305,7 @@
             </p>
           </article>
         </div>
-        </div>
+      </div>
     </section>
 
     <!-- SKILLS -->
@@ -325,18 +320,15 @@
         </p>
 
         <div class="grid md:grid-cols-4 gap-6">
-
-          <!-- Cyber Security -->
           <div class="bg-white rounded-2xl border border-borderlight p-6">
             <h3 class="font-lexend text-xl text-black mb-3">Cyber Security</h3>
             <ul class="font-mont text-sm text-gray-800 space-y-1">
               <li>• Web penetration testing dasar</li>
-              <li>• Dasar monitoring & incident </li>
+              <li>• Dasar monitoring & incident</li>
               <li>• Penyusunan laporan keamanan</li>
             </ul>
           </div>
 
-          <!-- IT Governance & Audit -->
           <div class="bg-white rounded-2xl border border-borderlight p-6">
             <h3 class="font-lexend text-xl text-black mb-3">IT Governance & Audit</h3>
             <ul class="font-mont text-sm text-gray-800 space-y-1">
@@ -346,7 +338,6 @@
             </ul>
           </div>
 
-          <!-- Data & Visualization -->
           <div class="bg-white rounded-2xl border border-borderlight p-6">
             <h3 class="font-lexend text-xl text-black mb-3">Data & Visualization</h3>
             <ul class="font-mont text-sm text-gray-800 space-y-1">
@@ -356,19 +347,17 @@
             </ul>
           </div>
 
-          <!-- Web & App Development -->
           <div class="bg-white rounded-2xl border border-borderlight p-6">
             <h3 class="font-lexend text-xl text-black mb-3">Web & App Development</h3>
             <ul class="font-mont text-sm text-gray-800 space-y-1">
-              <li>• Power Apps & power automate</li>
+              <li>• Power Apps & Power Automate</li>
               <li>• Membuat design UI/UX</li>
-              <li>• HTML, Tailwind & Postgresql</li>
+              <li>• HTML, Tailwind & PostgreSQL</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- PROJECTS -->
     <section id="projects" class="bg-white py-14">
@@ -382,7 +371,6 @@
         </p>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Project 1 -->
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
             <img src="img/Penmaru.jpeg"
                  alt="Analisis Tata Kelola PENMARU"
@@ -398,7 +386,6 @@
             </a>
           </article>
 
-          <!-- Project 2 -->
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
             <img src="img/RSAU.jpeg"
                  alt="Evaluasi Keamanan RSAU"
@@ -414,7 +401,6 @@
             </a>
           </article>
 
-          <!-- Project 3 -->
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
             <img src="img/Spendingscore.jpeg"
                  alt="Segmentasi Pelanggan"
@@ -430,7 +416,6 @@
             </a>
           </article>
 
-          <!-- Project 4 -->
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
             <img src="img/AiStress.jpeg"
                  alt="AI Deteksi Stres"
@@ -445,7 +430,6 @@
             </a>
           </article>
 
-          <!-- Project 5 -->
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
             <img src="img/E-Learning.jpeg"
                  alt="E-Learning Cyber Security"
@@ -460,7 +444,6 @@
             </a>
           </article>
 
-          <!-- Project 6 -->
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
             <img src="img/Keamanan.jpeg"
                  alt="Pengamanan Website Dasar"
@@ -491,40 +474,34 @@
 
         <div class="grid md:grid-cols-2 gap-10">
 
-          <!-- LEFT: CONTACT FORM (WEB3FORMS) -->
+          <!-- LEFT: CONTACT FORM -->
           <div class="bg-softgreen rounded-3xl border border-borderlight p-8">
             <h3 class="font-lexend text-2xl text-black mb-4">Kirim Pesan</h3>
 
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-              
-              <!-- Web3Forms Access Key -->
               <input type="hidden" name="access_key" value="50c4f41d-4e0f-4d0a-af43-3904fec585ad">
 
-              <!-- Nama -->
               <div>
                 <label class="font-mont text-sm text-gray-700">Nama</label>
                 <input type="text" name="name"
-                      class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                      placeholder="Nama Anda" required>
+                       class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
+                       placeholder="Nama Anda" required>
               </div>
 
-              <!-- Email -->
               <div>
                 <label class="font-mont text-sm text-gray-700">Email</label>
                 <input type="email" name="email"
-                      class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                      placeholder="Email Anda" required>
+                       class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
+                       placeholder="Email Anda" required>
               </div>
 
-              <!-- Subject -->
               <div>
                 <label class="font-mont text-sm text-gray-700">Subjek</label>
                 <input type="text" name="subject"
-                      class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                      placeholder="Subjek pesan (misal: Kolaborasi, Magang, atau Project)" required>
+                       class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
+                       placeholder="Subjek pesan (misal: Kolaborasi, Magang, atau Project)" required>
               </div>
 
-              <!-- Pesan -->
               <div>
                 <label class="font-mont text-sm text-gray-700">Pesan</label>
                 <textarea name="message" rows="4"
@@ -534,16 +511,14 @@
 
               <button type="submit"
                       class="px-8 py-3 rounded-2xl bg-primary text-white font-lexend text-lg font-semibold shadow-md
-                            transition-all duration-200 hover:bg-white hover:text-primary hover:border hover:border-primary">
+                             transition-all duration-200 hover:bg-white hover:text-primary hover:border hover:border-primary">
                 Kirim
               </button>
             </form>
           </div>
 
-
-          <!-- RIGHT: CONTACT PERSON (WITH ICONS & DESCRIPTION) -->
+          <!-- RIGHT: CONTACT PERSON -->
           <div class="bg-softgreen rounded-3xl border border-borderlight p-8 flex flex-col justify-center">
-
             <h3 class="font-lexend text-2xl text-black mb-2">Contact Person</h3>
 
             <p class="font-mont text-gray-700 text-sm mb-6 leading-relaxed">
@@ -553,57 +528,49 @@
             </p>
 
             <div class="space-y-5 text-lg font-mont text-black">
-
-              <!-- Gmail -->
               <div class="flex items-center gap-4">
                 <img src="https://img.icons8.com/color/48/gmail-new.png" 
-                    alt="Gmail" class="w-7 h-7">
+                     alt="Gmail" class="w-7 h-7">
                 <a href="mailto:farrelalfaqih.fae@gmail.com" class="hover:text-primary">
                   farrelalfaqih.fae@gmail.com
                 </a>
               </div>
 
-              <!-- WhatsApp / Phone -->
               <div class="flex items-center gap-4">
                 <img src="https://img.icons8.com/color/48/whatsapp--v1.png" 
-                    alt="WhatsApp" class="w-7 h-7">
+                     alt="WhatsApp" class="w-7 h-7">
                 <a href="https://wa.me/6285159031500" target="_blank" class="hover:text-primary">
                   +62 851 5903 1500
                 </a>
               </div>
 
-              <!-- LinkedIn -->
               <div class="flex items-center gap-4">
                 <img src="https://img.icons8.com/color/48/linkedin.png" 
-                    alt="LinkedIn" class="w-7 h-7">
+                     alt="LinkedIn" class="w-7 h-7">
                 <a href="https://www.linkedin.com/in/farrel-al-faqih-ekatama/" target="_blank"
-                  class="hover:text-primary">
+                   class="hover:text-primary">
                   linkedin.com/in/farrel-al-faqih-ekatama
                 </a>
               </div>
 
-              <!-- Instagram -->
               <div class="flex items-center gap-4">
                 <img src="https://img.icons8.com/color/48/instagram-new.png" 
-                    alt="Instagram" class="w-7 h-7">
+                     alt="Instagram" class="w-7 h-7">
                 <a href="https://www.instagram.com/farrelalfaqih.fae/" target="_blank"
-                  class="hover:text-primary">
+                   class="hover:text-primary">
                   @farrelalfaqih.fae
                 </a>
               </div>
-
             </div>
 
             <p class="font-mont text-gray-700 text-xs mt-8 italic">
               Semoga kita dapat berkolaborasi bersama.
             </p>
-
           </div>
 
         </div>
       </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer class="bg-primary mt-auto">
@@ -634,7 +601,6 @@
       const sectionEl = document.getElementById(sectionId);
       if (sectionEl) sections[sectionId] = sectionEl;
 
-      // Smooth scroll
       link.addEventListener("click", (e) => {
         e.preventDefault();
         const target = document.getElementById(sectionId);
@@ -650,12 +616,9 @@
     function setActiveNav(sectionId) {
       navLinks.forEach(link => {
         const linkSection = link.getAttribute("data-section");
-        // reset semua
         activeClasses.forEach(c => link.classList.remove(c));
         link.classList.remove("text-white");
-        if (!link.classList.contains("bg-softgreen")) {
-          link.classList.add("text-black");
-        }
+        link.classList.add("text-black");
 
         if (linkSection === sectionId) {
           activeClasses.forEach(c => link.classList.add(c));
@@ -685,4 +648,3 @@
 
 </body>
 </html>
-
