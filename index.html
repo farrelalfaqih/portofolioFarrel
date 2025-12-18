@@ -4,50 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portofolio Farrel Al Faqih Ekatama</title>
+  <link rel="icon" type="image/jpg" href="./assets/img/Farrel_staf.JPG" />
 
-  <!-- Typography -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- TailwindCSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            darkbg: '#000000',
-            darknav: '#1E1E1E',
-            darkcard: '#222A34',
-            primary: '#309255',
-            muted: '#909090',
-            borderlight: '#D9D9D9',
-            softgreen: '#EEFBF3',
-          },
-          fontFamily: {
-            lexend: ['Lexend', 'system-ui', 'sans-serif'],
-            mont: ['Montserrat', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <!-- Tailwind build output -->
+  <link rel="stylesheet" href="./dist/tailwind.css">
 
-  <style>
-    body {
-      font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-  </style>
+  <!-- Custom CSS (minimal) -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body class="bg-white text-gray-800">
+
+<body class="bg-white text-gray-800 font-mont">
   <div class="min-h-screen flex flex-col">
 
     <!-- Navbar -->
-    <header class="bg-softgreen/60 sticky top-0 z-40">
+    <header class="bg-softgreen/60 sticky top-0 z-40 backdrop-blur">
       <div class="max-w-7xl mx-auto px-4 lg:px-8 py-4">
         <div class="flex items-center justify-between gap-6">
           <div class="flex items-center gap-4">
             <div class="w-16 h-16 rounded-2xl border border-borderlight flex items-center justify-center bg-white">
-              <img src="img/Farrel_staf.JPG" alt="Foto profil singkat Farrel" class="w-14 h-14 object-cover rounded-xl">
+              <img src="./assets/img/Farrel_staf.JPG" alt="Foto profil singkat Farrel" class="w-14 h-14 object-cover rounded-xl">
             </div>
             <div class="font-lexend leading-tight">
               <div class="text-gray-800 text-2xl md:text-3xl font-bold">Portofolio</div>
@@ -56,39 +34,30 @@
           </div>
 
           <nav class="hidden md:flex items-center gap-4 font-mont text-lg" aria-label="Navigasi utama">
-            <a href="#home"
-               data-section="home"
+            <a href="#home" data-section="home"
                class="nav-link px-4 py-2 rounded-xl transition-all duration-200
                       bg-primary text-white font-semibold
                       hover:bg-white hover:text-primary hover:border hover:border-primary">
               Profil
             </a>
-            <a href="#journey"
-               data-section="journey"
+            <a href="#journey" data-section="journey"
                class="nav-link px-4 py-2 rounded-xl transition-all duration-200
-                      text-black
-                      hover:bg-softgreen hover:text-primary hover:font-semibold">
+                      text-black hover:bg-softgreen hover:text-primary hover:font-semibold">
               Perjalanan
             </a>
-            <a href="#skills"
-               data-section="skills"
+            <a href="#skills" data-section="skills"
                class="nav-link px-4 py-2 rounded-xl transition-all duration-200
-                      text-black
-                      hover:bg-softgreen hover:text-primary hover:font-semibold">
+                      text-black hover:bg-softgreen hover:text-primary hover:font-semibold">
               Keahlian
             </a>
-            <a href="#projects"
-               data-section="projects"
+            <a href="#projects" data-section="projects"
                class="nav-link px-4 py-2 rounded-xl transition-all duration-200
-                      text-black
-                      hover:bg-softgreen hover:text-primary hover:font-semibold">
+                      text-black hover:bg-softgreen hover:text-primary hover:font-semibold">
               Proyek
             </a>
-            <a href="#contact"
-               data-section="contact"
+            <a href="#contact" data-section="contact"
                class="nav-link px-4 py-2 rounded-xl transition-all duration-200
-                      text-black
-                      hover:bg-softgreen hover:text-primary hover:font-semibold">
+                      text-black hover:bg-softgreen hover:text-primary hover:font-semibold">
               Kontak
             </a>
           </nav>
@@ -96,7 +65,7 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="relative bg-softgreen/60 pt-12 pb-16">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-2 items-center">
@@ -104,7 +73,7 @@
             <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 flex items-center justify-center">
               <div class="absolute inset-0 rounded-3xl bg-primary/20 blur-3xl -z-10"></div>
               <img
-                src="img/Farrel_staf.JPG"
+                src="./assets/img/Farrel_staf.JPG"
                 alt="Foto profil Farrel Al Faqih Ekatama"
                 class="w-full h-full rounded-3xl object-cover border-4 border-white shadow-xl">
             </div>
@@ -114,14 +83,16 @@
             <p class="font-lexend text-primary text-lg md:text-xl font-semibold">
               Cyber Security • IT Governance • Data &amp; AI • Website &amp; Apps
             </p>
+
             <h1 class="font-lexend text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-snug">
               <span class="text-black font-medium">Farrel Al Faqih Ekatama</span><br>
               <span class="text-primary font-medium">Mahasiswa Sistem Informasi &amp;</span><br>
               <span class="text-black font-medium">IT Enthusiast</span>
             </h1>
+
             <p class="font-mont text-base md:text-lg text-gray-700 max-w-xl">
-              Mahasiswa semester 7 Sistem Informasi UPN "Veteran" Jakarta. Aktif di dunia keamanan siber dan tata kelola TI, 
-              menjabat sebagai Ketua KSM Cyber Security dengan pengalaman magang sebagai Internal Control Officer di Bank Indonesia 
+              Mahasiswa semester 7 Sistem Informasi UPN "Veteran" Jakarta. Aktif di dunia keamanan siber dan tata kelola TI,
+              menjabat sebagai Ketua KSM Cyber Security dengan pengalaman magang sebagai Internal Control Officer di Bank Indonesia
               dengan fokus pada pengembangan aplikasi penilaian kinerja dan dashboard monitoring.
             </p>
 
@@ -161,47 +132,39 @@
       </div>
     </section>
 
-    <!-- Track Section -->
+    <!-- Track -->
     <section class="bg-white py-10">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <div class="rounded-3xl bg-softgreen px-4 sm:px-6 lg:px-10 py-6 flex flex-wrap gap-4 justify-between">
           <div class="flex-1 min-w-[140px]">
             <div class="group w-full h-20 bg-white border border-borderlight rounded-2xl flex items-center justify-center
                         transition-all duration-200 hover:bg-primary hover:border-primary">
-              <span class="font-mont text-xl text-gray-800 group-hover:text-white">
-                Cyber Security
-              </span>
+              <span class="font-mont text-xl text-gray-800 group-hover:text-white">Cyber Security</span>
             </div>
           </div>
           <div class="flex-1 min-w-[140px]">
             <div class="group w-full h-20 bg-white border border-borderlight rounded-2xl flex items-center justify-center
                         transition-all duration-200 hover:bg-primary hover:border-primary">
-              <span class="font-mont text-xl text-gray-800 group-hover:text-white">
-                IT Governance
-              </span>
+              <span class="font-mont text-xl text-gray-800 group-hover:text-white">IT Governance</span>
             </div>
           </div>
           <div class="flex-1 min-w-[140px]">
             <div class="group w-full h-20 bg-white border border-borderlight rounded-2xl flex items-center justify-center
                         transition-all duration-200 hover:bg-primary hover:border-primary">
-              <span class="font-mont text-xl text-gray-800 group-hover:text-white">
-                Data &amp; BI
-              </span>
+              <span class="font-mont text-xl text-gray-800 group-hover:text-white">Data &amp; BI</span>
             </div>
           </div>
           <div class="flex-1 min-w-[140px]">
             <div class="group w-full h-20 bg-white border border-borderlight rounded-2xl flex items-center justify-center
                         transition-all duration-200 hover:bg-primary hover:border-primary">
-              <span class="font-mont text-xl text-gray-800 group-hover:text-white">
-               Web &amp; Apps
-              </span>
+              <span class="font-mont text-xl text-gray-800 group-hover:text-white">Web &amp; Apps</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Journey Section -->
+    <!-- Journey -->
     <section id="journey" class="bg-white py-14">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <div class="flex flex-col lg:flex-row items-start gap-10 mb-8">
@@ -218,7 +181,7 @@
 
         <div class="grid md:grid-cols-2 gap-6">
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/Kampus_Upnvj.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Kampus UPN Veteran Jakarta" loading="lazy">
+            <img src="./assets/img/Kampus_Upnvj.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Kampus UPN Veteran Jakarta" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Pendidikan</span>
             <h3 class="font-lexend text-xl text-black">Sistem Informasi, UPN "Veteran" Jakarta</h3>
             <p class="text-sm text-muted font-mont">Agu 2022 – Sekarang</p>
@@ -228,7 +191,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/BankIndonesia.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Magang Bank Indonesia" loading="lazy">
+            <img src="./assets/img/BankIndonesia.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Magang Bank Indonesia" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Magang</span>
             <h3 class="font-lexend text-xl text-black">Internal Control Officer – Bank Indonesia</h3>
             <p class="text-sm text-muted font-mont">Jan 2025 – Agustus 2025</p>
@@ -238,7 +201,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/Ketua.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Ketua KSM Cyber Security" loading="lazy">
+            <img src="./assets/img/Ketua.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Ketua KSM Cyber Security" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
             <h3 class="font-lexend text-xl text-black">Ketua KSM Cyber Security</h3>
             <p class="text-sm text-muted font-mont">Jan 2025 – Sekarang</p>
@@ -248,7 +211,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/privacyday.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="World Privacy Day Privasimu" loading="lazy">
+            <img src="./assets/img/privacyday.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="World Privacy Day Privasimu" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Acara</span>
             <h3 class="font-lexend text-xl text-black">Liaison Officer World Privacy Day by Privasimu</h3>
             <p class="text-sm text-muted font-mont">Februari 2025</p>
@@ -258,7 +221,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/WakilKetua.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Wakil Ketua KSM Cyber Security" loading="lazy">
+            <img src="./assets/img/WakilKetua.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Wakil Ketua KSM Cyber Security" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
             <h3 class="font-lexend text-xl text-black">Wakil Ketua KSM Cyber Security</h3>
             <p class="text-sm text-muted font-mont">2024 – 2025</p>
@@ -268,7 +231,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/SPPI.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Staff SPPI BEM UPNVJ" loading="lazy">
+            <img src="./assets/img/SPPI.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="Staff SPPI BEM UPNVJ" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Acara</span>
             <h3 class="font-lexend text-xl text-black">Staff SPPI BEM UPN Veteran Jakarta</h3>
             <p class="text-sm text-muted font-mont">2024 – 2025</p>
@@ -278,7 +241,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/PSDM.jpeg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="PSDM KSM Cyber Security" loading="lazy">
+            <img src="./assets/img/PSDM.jpeg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="PSDM KSM Cyber Security" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
             <h3 class="font-lexend text-xl text-black">Staf PSDM KSM Cyber Security</h3>
             <p class="text-sm text-muted font-mont">2023 – 2024</p>
@@ -288,7 +251,7 @@
           </article>
 
           <article class="bg-softgreen rounded-2xl border border-borderlight p-6 flex flex-col gap-3">
-            <img src="img/OSIS.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="OSIS SMAN 10 Bogor" loading="lazy">
+            <img src="./assets/img/OSIS.jpg" class="w-full h-56 md:h-64 object-cover rounded-xl" alt="OSIS SMAN 10 Bogor" loading="lazy">
             <span class="text-xs font-mont font-semibold text-primary uppercase tracking-wide">Organisasi</span>
             <h3 class="font-lexend text-xl text-black">Koordinator Seksi Bidang 9 OSIS SMAN 10 Bogor</h3>
             <p class="text-sm text-muted font-mont">2019 – 2020</p>
@@ -300,7 +263,7 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills -->
     <section id="skills" class="bg-softgreen/60 py-14">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 class="font-lexend text-3xl sm:text-4xl text-center mb-2">
@@ -351,7 +314,7 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects" class="bg-white py-14">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 class="font-lexend text-3xl sm:text-4xl text-center mb-2">
@@ -364,9 +327,7 @@
 
         <div class="grid md:grid-cols-3 gap-8">
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
-            <img src="img/Sehati.png"
-                 alt="Sehati"
-                 class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+            <img src="./assets/img/Sehati.png" alt="Sehati" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
             <h3 class="font-mont text-xl font-semibold mb-2">Sehati: Integrated Digital Health Ecosystem</h3>
             <p class="font-mont text-sm text-black mb-4">
               Merancang UI/UX ekosistem kesehatan inklusif yang menyederhanakan akses layanan medis bagi seluruh lapisan masyarakat.
@@ -379,9 +340,7 @@
           </article>
 
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
-            <img src="img/RSAU.jpeg"
-                 alt="Evaluasi Keamanan dan Layanan TI RSAU"
-                 class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+            <img src="./assets/img/RSAU.jpeg" alt="Evaluasi Keamanan dan Layanan TI RSAU" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
             <h3 class="font-mont text-xl font-semibold mb-2">Evaluasi Keamanan &amp; Layanan TI RSAU</h3>
             <p class="font-mont text-sm text-black mb-4">
               Evaluasi kontrol keamanan informasi dan layanan TI di RSAU Hasan Toto menggunakan ITIL v4 dan ISO 27002:2022.
@@ -394,9 +353,7 @@
           </article>
 
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
-            <img src="img/Spendingscore.jpeg"
-                 alt="Segmentasi Pelanggan"
-                 class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+            <img src="./assets/img/Spendingscore.jpeg" alt="Segmentasi Pelanggan" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
             <h3 class="font-mont text-xl font-semibold mb-2">Segmentasi Pelanggan</h3>
             <p class="font-mont text-sm text-black mb-4">
               Mengelompokkan pelanggan berdasarkan pola pengeluaran menggunakan Pentaho, MySQL, dan Looker Studio untuk mendukung keputusan pemasaran.
@@ -409,23 +366,20 @@
           </article>
 
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
-            <img src="img/AiStress.jpeg"
-                 alt="AI untuk Deteksi Stres"
-                 class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+            <img src="./assets/img/AiStress.jpeg" alt="AI untuk Deteksi Stres" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
             <h3 class="font-mont text-xl font-semibold mb-2">AI untuk Deteksi Stres</h3>
             <p class="font-mont text-sm text-black mb-4">
               Menggunakan NLP dan Naive Bayes untuk mendeteksi indikasi stres dari teks pengguna sebagai studi kasus pemanfaatan AI.
             </p>
             <a href="https://drive.google.com/drive/folders/1EqeKxiyx505IltT7_NoujGT9Bws-GdzM?usp=sharing"
+               target="_blank" rel="noopener noreferrer"
                class="mt-auto inline-flex text-primary font-mont font-semibold hover:underline">
               Lihat Detail &rarr;
             </a>
           </article>
 
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
-            <img src="img/E-Learning.jpeg"
-                 alt="Website E-Learning KSM Cyber Security"
-                 class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+            <img src="./assets/img/E-Learning.jpeg" alt="Website E-Learning KSM Cyber Security" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
             <h3 class="font-mont text-xl font-semibold mb-2">Website E-Learning KSM</h3>
             <p class="font-mont text-sm text-black mb-4">
               Membuat website e-learning mulai dari desain UI/UX hingga implementasi menggunakan Tailwind CSS, HTML, dan Supabase.
@@ -438,9 +392,7 @@
           </article>
 
           <article class="border-2 border-zinc-300 rounded-2xl p-4 flex flex-col h-full bg-white">
-            <img src="img/Keamanan.jpeg"
-                 alt="Laporan Penetration Tester"
-                 class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
+            <img src="./assets/img/Keamanan.jpeg" alt="Laporan Penetration Tester" class="w-full h-48 object-cover rounded-2xl mb-4" loading="lazy">
             <h3 class="font-mont text-xl font-semibold mb-2">Laporan Penetration Tester</h3>
             <p class="font-mont text-sm text-black mb-4">
               Mencari celah keamanan pada website dan menyusun laporan penetration tester.
@@ -455,7 +407,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact" class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 lg:px-8">
         <h2 class="text-3xl font-lexend text-center text-black mb-2">
@@ -471,58 +423,39 @@
 
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
               <input type="hidden" name="access_key" value="50c4f41d-4e0f-4d0a-af43-3904fec585ad">
-              <!-- Honeypot field for spam protection -->
               <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
 
               <div>
                 <label class="font-mont text-sm text-gray-700" for="name">Nama</label>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
+                <input id="name" type="text" name="name"
                   class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                  placeholder="Nama Anda"
-                  autocomplete="name"
-                  required>
+                  placeholder="Nama Anda" autocomplete="name" required>
               </div>
 
               <div>
                 <label class="font-mont text-sm text-gray-700" for="email">Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
+                <input id="email" type="email" name="email"
                   class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                  placeholder="Email Anda"
-                  autocomplete="email"
-                  required>
+                  placeholder="Email Anda" autocomplete="email" required>
               </div>
 
               <div>
                 <label class="font-mont text-sm text-gray-700" for="subject">Subjek</label>
-                <input
-                  id="subject"
-                  type="text"
-                  name="subject"
+                <input id="subject" type="text" name="subject"
                   class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                  placeholder="Subjek pesan (misal: Kolaborasi, Magang, atau Project)"
-                  required>
+                  placeholder="Subjek pesan (misal: Kolaborasi, Magang, atau Project)" required>
               </div>
 
               <div>
                 <label class="font-mont text-sm text-gray-700" for="message">Pesan</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="4"
+                <textarea id="message" name="message" rows="4"
                   class="w-full mt-1 px-4 py-3 rounded-xl border border-borderlight focus:border-primary focus:ring-primary"
-                  placeholder="Tulis pesan..."
-                  required></textarea>
+                  placeholder="Tulis pesan..." required></textarea>
               </div>
 
               <button type="submit"
-                      class="px-8 py-3 rounded-2xl bg-primary text-white font-lexend text-lg font-semibold shadow-md
-                             transition-all duration-200 hover:bg-white hover:text-primary hover:border hover:border-primary">
+                class="px-8 py-3 rounded-2xl bg-primary text-white font-lexend text-lg font-semibold shadow-md
+                       transition-all duration-200 hover:bg-white hover:text-primary hover:border hover:border-primary">
                 Kirim
               </button>
             </form>
@@ -532,42 +465,36 @@
             <h3 class="font-lexend text-2xl text-black mb-2">Contact Person</h3>
 
             <p class="font-mont text-gray-700 text-sm mb-6 leading-relaxed">
-              Anda dapat terhubung dengan saya melalui platform berikut. 
-              Saya terbuka untuk diskusi dan kolaborasi di bidang sistem informasi, 
+              Anda dapat terhubung dengan saya melalui platform berikut.
+              Saya terbuka untuk diskusi dan kolaborasi di bidang sistem informasi,
               keamanan siber, dan tata kelola TI.
             </p>
 
             <div class="space-y-5 text-lg font-mont text-black">
               <div class="flex items-center gap-4">
-                <img src="https://img.icons8.com/color/48/gmail-new.png" 
-                     alt="Ikon Gmail" class="w-7 h-7" loading="lazy">
+                <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Ikon Gmail" class="w-7 h-7" loading="lazy">
                 <a href="mailto:farrelalfaqih.fae@gmail.com" class="hover:text-primary">
                   farrelalfaqih.fae@gmail.com
                 </a>
               </div>
 
               <div class="flex items-center gap-4">
-                <img src="https://img.icons8.com/color/48/whatsapp--v1.png" 
-                     alt="Ikon WhatsApp" class="w-7 h-7" loading="lazy">
+                <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="Ikon WhatsApp" class="w-7 h-7" loading="lazy">
                 <a href="https://wa.me/6285159031500" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
                   +62 851 5903 1500
                 </a>
               </div>
 
               <div class="flex items-center gap-4">
-                <img src="https://img.icons8.com/color/48/linkedin.png" 
-                     alt="Ikon LinkedIn" class="w-7 h-7" loading="lazy">
-                <a href="https://www.linkedin.com/in/farrel-al-faqih-ekatama/" target="_blank" rel="noopener noreferrer"
-                   class="hover:text-primary">
+                <img src="https://img.icons8.com/color/48/linkedin.png" alt="Ikon LinkedIn" class="w-7 h-7" loading="lazy">
+                <a href="https://www.linkedin.com/in/farrel-al-faqih-ekatama/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
                   linkedin.com/in/farrel-al-faqih-ekatama
                 </a>
               </div>
 
               <div class="flex items-center gap-4">
-                <img src="https://img.icons8.com/color/48/instagram-new.png" 
-                     alt="Ikon Instagram" class="w-7 h-7" loading="lazy">
-                <a href="https://www.instagram.com/farrelalfaqih.fae/" target="_blank" rel="noopener noreferrer"
-                   class="hover:text-primary">
+                <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Ikon Instagram" class="w-7 h-7" loading="lazy">
+                <a href="https://www.instagram.com/farrelalfaqih.fae/" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
                   @farrelalfaqih.fae
                 </a>
               </div>
@@ -577,7 +504,6 @@
               Semoga kita dapat berkolaborasi bersama.
             </p>
           </div>
-
         </div>
       </div>
     </section>
@@ -593,69 +519,7 @@
 
   </div>
 
-  <script>
-    const activeClasses = [
-      "bg-primary",
-      "text-white",
-      "font-semibold",
-      "border",
-      "border-primary"
-    ];
-
-    const navLinks = document.querySelectorAll("nav .nav-link");
-    const sections = {};
-
-    navLinks.forEach(link => {
-      const sectionId = link.getAttribute("data-section");
-      const sectionEl = document.getElementById(sectionId);
-      if (sectionEl) sections[sectionId] = sectionEl;
-
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const target = document.getElementById(sectionId);
-        if (target) {
-          window.scrollTo({
-            top: target.offsetTop - 80,
-            behavior: "smooth"
-          });
-        }
-      });
-    });
-
-    function setActiveNav(sectionId) {
-      navLinks.forEach(link => {
-        const linkSection = link.getAttribute("data-section");
-        activeClasses.forEach(c => link.classList.remove(c));
-        link.classList.remove("text-white");
-        link.classList.add("text-black");
-
-        if (linkSection === sectionId) {
-          activeClasses.forEach(c => link.classList.add(c));
-          link.classList.remove("text-black");
-        }
-      });
-    }
-
-    const observerOptions = {
-      root: null,
-      rootMargin: "-40% 0px -40% 0px",
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          setActiveNav(id);
-        }
-      });
-    }, observerOptions);
-
-    Object.values(sections).forEach(sec => observer.observe(sec));
-    setActiveNav("home");
-  </script>
+  <!-- JS -->
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
-
-
-
